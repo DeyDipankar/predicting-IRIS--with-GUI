@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <form action="{{url_for('prediction')}}" method = 'POST'>
+        <center>
+            <h3>Iris Flower Recognition</h3>
+            Sepal Length(Cm)<input type="text" name="field1" placeholder="field 1">
+            Sepal Width(Cm)<input type="text" name="field2" placeholder="field 2">
+            Petal Length(Cm)<input type="text" name="field3" placeholder="field 3">
+            Petal Width(Cm)<input type="text" name="field4" placeholder="field 4"><br><br>
+            <input type="submit" value="Predict">
+
+        </center>
+    </form>
+    <center>
+        <h2>Prediction</h2>
+        {%if data == 0%}
+        <h3>Iris Setosa</h3>
+        <img src="static\setosa.jpg" alt="setosa">
+        {%endif%}
+        {%if data == 1%}
+        <h3>Iris Versicolor</h3>
+        <img src="static\versicolor.jpg" alt="versicolor">
+        {%endif%}
+        {%if data == 2%}
+        <h3>Iris Virginica</h3>
+        <img src="static\virginica.jpg" alt="virginica">
+        {%endif%}
+    
+
+    </center>
+</body>
+</html>
