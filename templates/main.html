@@ -20,20 +20,8 @@
     </form>
     <center>
         <h2>Prediction</h2>
-        {%if data == 0%}
-        <h3>Iris Setosa</h3>
-        <img src="static\setosa.jpg" alt="setosa">
-        {%endif%}
-        {%if data == 1%}
-        <h3>Iris Versicolor</h3>
-        <img src="static\versicolor.jpg" alt="versicolor">
-        {%endif%}
-        {%if data == 2%}
-        <h3>Iris Virginica</h3>
-        <img src="static\virginica.jpg" alt="virginica">
-        {%endif%}
-    
-
+        <img src={{ image_file}} >
+        <h3>{{data}}</h3>
     </center>
 </body>
 </html>
